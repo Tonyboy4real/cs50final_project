@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+        <div class="mb-3">
+            <table class ="table table-striped" >
+                <thead>
+
+
+                        <th>name</th>
+                        <th>price</th>
+                        <th>symbol</th>
+
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>{{result["name"]}}</td>
+                        <td>{{result["price"] | usd }}</td>
+                        <td>{{result["symbol"]}}</td>
+                    <tr>
+                </tbody>
+
+            </table>
+        </div>
+
+{% endblock %}
